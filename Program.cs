@@ -17,7 +17,7 @@ public class Program
 
     static Program()
     {
-        // im not sure have this stuff is needed but i dont think its hurting anything so
+        // im not sure half this stuff is needed but i dont think its hurting anything so
         On.TimeHandler.Update += TimeHandler_Update;
         On.CursorHandler.Update += CursorHandler_Update;
         On.HasteInputSystem.CanTakeInput += HasteInputSystem_CanTakeInput;
