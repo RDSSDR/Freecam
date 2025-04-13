@@ -47,7 +47,7 @@ public class FreeCam : MonoBehaviour
 
     void Update()
     {
-        if (!Program.gui.isFreeCam || Program.gui.isMenuOpen)
+        if (!Program.gui.isFreeCam || Program.gui.isMenuOpen || !Program.gui.isFreeCamControlled)
         {
             return;
         }

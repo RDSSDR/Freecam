@@ -24,6 +24,8 @@ namespace FC
         #region Public Values
         public bool isTimeFrozen = false;
         public bool isFreeCam = false;
+        public bool isPlayerControlled = true;
+        public bool isFreeCamControlled = false;
         public float movementSpeed = 10f;
         public float fastMovementSpeed = 100f;
         public float freeLookSensitivity = 3f;
@@ -158,6 +160,10 @@ namespace FC
                 //GUI.Label(new Rect(MENUX, yPos += ITEMHEIGHT, ITEMWIDTH, ITEMHEIGHT), "Some Post Processing Effects Are Baked In", labelStyle);
 
                 isFreeCam = GUI.Toggle(new Rect(MENUX, yPos += ITEMHEIGHT, ITEMWIDTH, ITEMHEIGHT), isFreeCam, "Toggle Freecam", toggleStyle);
+
+                isPlayerControlled = GUI.Toggle(new Rect(MENUX, yPos += ITEMHEIGHT, ITEMWIDTH, ITEMHEIGHT), isPlayerControlled, "Toggle Player Controlled", toggleStyle);
+
+                isFreeCamControlled = GUI.Toggle(new Rect(MENUX, yPos += ITEMHEIGHT, ITEMWIDTH, ITEMHEIGHT), isFreeCamControlled, "Toggle Freecam Controlled", toggleStyle);
 
                 GUI.Label(new Rect(MENUX, yPos += ITEMHEIGHT, ITEMWIDTH, ITEMHEIGHT), $"Movement Speed: {movementSpeed}", labelStyle);
                 movementSpeed = GUI.HorizontalSlider(new Rect(MENUX, yPos += ITEMHEIGHT, ITEMWIDTH, ITEMHEIGHT), movementSpeed, 0f, 1000f);

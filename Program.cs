@@ -89,7 +89,7 @@ public class Program
 
     private static bool HasteInputSystem_CanTakeInput(On.HasteInputSystem.orig_CanTakeInput orig)
     {
-        if (gui.isFreeCam || gui.isMenuOpen)
+        if (gui.isPlayerControlled || gui.isMenuOpen)
         {
             return false;
         }
